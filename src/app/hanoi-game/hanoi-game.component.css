@@ -1,0 +1,43 @@
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+#container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.tower {
+  border: 1px solid white;
+  width: 2px;
+  height: 300px;
+  position: relative;
+}
+.disc {
+  position: absolute;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  background-color: rgba(173, 216, 230, 1);
+  border: 2px solid rgba(0, 0, 139, 1);
+  left: 50%;
+  transform: translateX(-50%);
+}
+h2 {
+  font-size: 36px;
+  margin-top: 50px;
+}
+
+#binaryNumber,
+#stepCounter,
+#numberOfDiscs {
+  font-size: 48px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+}

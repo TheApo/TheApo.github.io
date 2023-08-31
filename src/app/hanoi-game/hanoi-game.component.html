@@ -1,0 +1,68 @@
+<div class="container text-center mt-5 bg-dark text-light">
+  <h1 class="mb-5">Binäre Türme von Hanoi</h1>
+
+  <div id="container" class="mb-5 text-dark">
+    <div id="tower1" #tower1 class="tower"></div>
+    <div id="tower2" #tower2 class="tower"></div>
+    <div id="tower3" #tower3 class="tower"></div>
+  </div>
+
+  <button #nextStep (click)="onNextStepClick()" class="btn btn-primary me-3">
+    Nächster Schritt
+  </button>
+  <button (click)="onResetClick()" class="btn btn-danger">Reset</button>
+
+  <div class="mt-5 fs-1">
+    <span class="fs-1 me-3">Binäre Zahl: <span #binaryNumber>0000</span></span>
+  </div>
+  <span class="fs-4 me-3"
+    >Anzahl der Schritte: <span #stepCounterElement>0</span></span
+  >
+
+  <div class="mt-5">
+    <button (click)="onDecreaseDiscsClick()" class="btn btn-secondary me-3">
+      -
+    </button>
+    <span class="fs-4 me-3"
+      >Anzahl der Scheiben: <span #numberOfDiscsElement>4</span></span
+    >
+    <button (click)="onIncreaseDiscsClick()" class="btn btn-secondary">
+      +
+    </button>
+  </div>
+
+  <!-- Collapsible Rules Section -->
+  <button
+    class="btn btn-link text-white"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#rulesCollapse"
+    aria-expanded="false"
+    aria-controls="rulesCollapse"
+  >
+    Regeln
+  </button>
+  <div class="collapse bg-dark text-light" id="rulesCollapse">
+    <div class="card card-body bg-dark text-white">
+      <p>Die binäre Zahl ist so lang wie es Scheiben gibt.</p>
+      <p>Bei jedem Schritt wird die Zahl um 1 erhöht nach der binären Logik.</p>
+      <p>Jede Scheibe ist an eine binäre Stelle gekoppelt.</p>
+      <p>Die größte Scheibe stellt die erste Stelle dar, usw.</p>
+      <p>
+        Springt beim nächsten Schritt eine Zahl von 0 auf 1, wird diese Scheibe
+        verschoben.
+      </p>
+      <p>
+        1.) Es gelten die normalen Türme von Hanoi Regeln, dass jede Scheibe nur
+        an eine Stelle kann, wenn sie nicht größer ist, als die Scheiben, die
+        schon drauf liegen.
+      </p>
+      <p>Es wird immer ein Stapel gesucht, wo es passen kann.</p>
+      <p>
+        2.) Es gibt nur eine Extra Regel für die kleinste Scheibe, dass sie
+        immer nach rechts wandert, wenn ihre Zahl auf 1 geht. Kann sie nicht
+        mehr nach rechts wandern, fängt sie wieder links vorne an.
+      </p>
+    </div>
+  </div>
+</div>
